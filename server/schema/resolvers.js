@@ -38,11 +38,11 @@ user: async (parent, { username }) => {
 
             return{token,user};
         },
-        saveBook: async (parent, {bookData}, context) => {
+        saveBook: async (parent, {bookInfo}, context) => {
             if (context.user) {
                 const updatedUser = await User.findByIdAndUpdate(
                     {_id: context.user._id},
-                    {},
+                    {$push: {savedBooks: bookInfo}},
                     {new: true, runValidators: true}
                 );
                 return updatedUser;
@@ -53,7 +53,7 @@ user: async (parent, { username }) => {
             if (context.user){
                 const updatedUser = await User.findOneAndUpdate(
                     {_id: context.user._id},
-                    {$pull: {savedBook: {bookId: bookId}}},
+                    {$pull: {savedBooks: {bookId: bookId}}},
                     {new:true}
                 );
                 return updatedUser

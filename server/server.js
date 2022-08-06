@@ -25,7 +25,7 @@ if (process.env.NODE_ENV === 'production') {
 
 const startApolloServer = async (typeDefs,resolvers) => {
   await server.start()
-  server.appyMiddleware({ app })
+  server.applyMiddleware({ app })
 }
 
 db.once('open', () => {
