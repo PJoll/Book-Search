@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router,  Route } from 'react-router-dom';
 import {ApolloProvider} from '@apollo/react-hooks';
 import ApolloClient from 'appolo-boost';
 import SearchBooks from './pages/SearchBooks';
@@ -29,11 +29,11 @@ function App() {
         
           <Route 
             path='/' 
-            component={<SearchBooks />} 
+            component={SearchBooks } 
           />
           <Route 
             path='/saved' 
-            component={<SavedBooks />} 
+            component={SavedBooks } 
           />
           <Route 
             render={()=><h1 className='display-2'>Wrong page!</h1>}
