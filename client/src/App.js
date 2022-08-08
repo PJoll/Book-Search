@@ -15,6 +15,7 @@ const client = new ApolloClient({
     });
   },
   uri: '/graphql',
+ 
   cache: new InMemoryCache(),
 });
 
@@ -35,6 +36,7 @@ function App() {
             path='/saved' 
             component={SavedBooks } 
           />
+          
           <Route 
             render={()=><h1 className='display-2'>Wrong page!</h1>}/>
         </Routes>
