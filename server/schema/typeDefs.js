@@ -48,17 +48,6 @@ removeBook(bookId:String!):User
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
 `
 
 

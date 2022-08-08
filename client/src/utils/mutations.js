@@ -32,7 +32,7 @@ email
 
 export const SAVE_BOOK = gql`
 
-mutation saveBook($bookData: BookInput!){
+mutation saveBook($bookData: SaveBooks!){
 saveBook(bookData:$bookData){
 _id
 username
