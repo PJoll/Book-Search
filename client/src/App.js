@@ -1,12 +1,11 @@
 import React from 'react';
-import { BrowserRouter as Router,  Route } from 'react-router-dom';
-import {ApolloProvider} from '@apollo/react-hooks';
-import ApolloClient from 'appolo-boost';
+import { BrowserRouter as Router,Routes,  Route } from 'react-router-dom';
+import {ApolloProvider,ApolloClient} from '@apollo/client';
 import SearchBooks from './pages/SearchBooks';
 import SavedBooks from './pages/SavedBooks';
 import Navbar from './components/Navbar';
 
-const apolloClient = new ApolloClient({
+const client = new ApolloClient({
   request: operation => {
     const token = localStorage.getItem('id_token');
     operation.setContext({
@@ -25,7 +24,7 @@ function App() {
       <Router>
       <>
         <Navbar />
-        <Switch>
+        <Routes>
         
           <Route 
             path='/' 
@@ -36,9 +35,8 @@ function App() {
             component={SavedBooks } 
           />
           <Route 
-            render={()=><h1 className='display-2'>Wrong page!</h1>}
-          />
-        </Switch>
+            render={()=><h1 className='display-2'>Wrong page!</h1>}/>
+        </Routes>
       </>
     </Router>
     </ApolloProvider>
