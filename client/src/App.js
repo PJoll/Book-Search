@@ -30,14 +30,15 @@ function App() {
         
           <Route 
             path='/' 
-            component={SearchBooks } 
+            element={<SearchBooks/> } 
           />
           <Route 
             path='/saved' 
-            component={SavedBooks } 
+            element={<SavedBooks/> } 
           />
           
           <Route 
+          path = '*'
             render={()=><h1 className='display-2'>Wrong page!</h1>}/>
         </Routes>
       </>
