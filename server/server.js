@@ -32,7 +32,7 @@ app.get('/', (req, res) => {
 const startApolloServer = async (typeDefs,resolvers) => {
   await server.start();
   server.applyMiddleware({ app })
-}
+
 
 
 
@@ -42,5 +42,5 @@ db.once('open', () => {
     console.log(`Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`);
   });
 });
-
+}
 startApolloServer(typeDefs,resolvers);
