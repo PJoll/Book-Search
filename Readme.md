@@ -1,7 +1,7 @@
-# Team-Profile-Generator
+# Book-Search
 
 ## Description 
-The goal of the project is to create a Book search egine that can find any book from google
+The goal of the project is to create a Book search egine that can find any book from google.
 
 
 **The following problems are solved,**
@@ -26,3 +26,12 @@ The goal of the project is to create a Book search egine that can find any book 
 
 https://desolate-springs-54704.herokuapp.com/
 https://github.com/PJoll/Book-Search
+
+below are screenshots of the deployed app
+
+
+![alt text](./client/public/Book-serach.png)
+
+
+
+![alt text](./client/public/Book-homepage.png)
