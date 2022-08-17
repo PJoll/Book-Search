@@ -11,7 +11,9 @@ const PORT = process.env.PORT || 3001;
 const server = new ApolloServer({
   typeDefs,
   resolvers,
-  context: authMiddleware
+  context: authMiddleware,
+  introspection: true,
+  playground: true,
 });
 
 
@@ -41,4 +43,4 @@ db.once('open', () => {
   });
 });
 
-startApolloServer(typeDefs,resolvers)
+startApolloServer(typeDefs,resolvers);
